@@ -1,13 +1,22 @@
-"use strict" //use it for newer version
+//reference type (non primitive data types)
 
-//null is an object
-let no = "22a"
-let newno = Number(no)
-console.log(typeof newno)
-console.log(newno);
+// array , objects , functions
 
-var nn = false
-nn = "as";
-console.log(typeof nn)
+//dynamically typed language
 
-console.log("September");
+const id  = Symbol('123')
+
+//console.log(id);
+
+
+const no = 23423948239489234n
+//console.log(typeof no);
+
+const myobj = ["abc","nvs","kcdl"]
+let my ={
+    name: "anil",
+    age:42,
+    class: "423"
+
+}
+console.log(my);
