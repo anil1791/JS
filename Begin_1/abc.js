@@ -20,3 +20,6 @@ let my ={
 
 }
 console.log(my);
+
+// stack (primitve)  
+// heap (non prmitive)
