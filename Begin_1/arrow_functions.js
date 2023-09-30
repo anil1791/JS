@@ -20,7 +20,7 @@ function mynum()
 {
     console.log(this);
 }
-//mynum()
+mynum()
 
 const myobj = {
     name : "Anil",
@@ -30,7 +30,7 @@ const myobj = {
                 console.log(this)
             }
 }
-//myobj.doFun()
+myobj.doFun()
 
 const myfunction = (n1,n2) => {
     console.log(this);
@@ -45,5 +45,5 @@ const ff1 = (n1,n2) => (n1+n2)      //called implicit return
 //console.log(ff1(2,3));
 
 const f2 = () => ({name: "Anil", age:12})
-console.log(f2());
+//console.log(f2());
 
