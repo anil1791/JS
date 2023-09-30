@@ -33,6 +33,32 @@
             <li class="list-item">three</li>
             <li class="list-item">four</li>
         </ul>
+        <ul class="language">
+            <li>javascript</li>
+            <li>c++</li>
+        </ul>
     </div>
 </body>
+<script>
+    /*
+    const div = document.createElement('div')
+    div.className = 'mydiv'
+    div.id = 'mydivid'
+    div.style.backgroundColor = 'green'
+    div.style.padding = '12px'
+    div.innerText = "This is an sample div element"
+    document.body.appendChild(div)
+    */
+
+    function addLanguage(langName)
+    {
+        const liItem = document.createElement('li')
+        //liItem.innerHTML = langName           there is traversing in this way - so use document.createTextNode
+        liItem.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(liItem)
+        //console.log(ul);
+    }
+    addLanguage("Ruby")
+    addLanguage('python')
+</script>
 </html>
