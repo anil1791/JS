@@ -27,16 +27,25 @@
         <img src="https://picsum.photos/200/300?grayscale" id="a3" alt="">
        
         <img src="https://picsum.photos/200/300/?blur" id ="a4" alt="">
-       
+        
+
+        <a href="https://www.google.com/" id="google">Google</a>
     </div>
 
     
     
 </body>
 <script>
+    document.getElementsByClassName('centered').addEventListener('click',function(){
+        console.log('Div clicked');
+    },false)
     document.getElementById('a1').addEventListener('click',function(){
         alert("U clicked an image")
     },false)
-
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault()
+        console.log("google clicked");
+        
+    },false)
 </script>
 </html>
