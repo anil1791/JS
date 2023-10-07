@@ -19,7 +19,7 @@
     </style>
 </head>
 <body style="background-color: darkcyan;">
-    <div class="centered">    
+    <div class="centered" id="center">    
         <img src="https://picsum.photos/id/237/200/300" id="a1" alt="">
        
         <img src="https://picsum.photos/seed/picsum/200/300" id="a2" alt="">
@@ -36,8 +36,11 @@
     
 </body>
 <script>
-    document.getElementsByClassName('centered').addEventListener('click',function(){
+    document.getElementById('center').addEventListener('click',function(e){
         console.log('Div clicked');
+        console.log(e.target)
+        let abc = e.target.parentNode
+        abc.remove()
     },false)
     document.getElementById('a1').addEventListener('click',function(){
         alert("U clicked an image")
@@ -49,3 +52,7 @@
     },false)
 </script>
 </html>
+
+//event capturing   when the top element is shown first , mark the addEventListener 's third argumment as true'
+//event bubbling whent the bottom element is shown first then top element mark the addEventListener's third argument s false for this
+// use stopProgation to stop bubbling
