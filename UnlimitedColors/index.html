@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited colors</title>
+    <style>
+        .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* 100% of the viewport height */
+    }
+        /* Card container */
+    .card {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+    }
+
+    /* Card title */
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    /* Card content */
+    .card p {
+      font-size: 16px;
+    }
+    </style>
+</head>
+<body style="background-color: green;">
+    <div class="center-container">
+        <div class="card">
+            <h1>Start should change the color every second</h1>
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
+    </div>
+    
+</body>
+<script>
+  const startBtn = document.getElementById('start');
+  const stopBtn = document.getElementById('stop');
+
+  function getRandomColor(){
+    const letters = '0123456789ABCDEF'
+    let colors = '#'
+    for(let i= 0;i<6;i++)
+    {
+      colors += letters[Math.floor(Math.random()*16)]
+    }
+    return colors
+  }
+
+  let intervalId
+  startBtn.addEventListener('click',function(){
+    console.log('Start button clicked')
+    intervalId = setInterval(function(){
+    document.querySelector('body').style.backgroundColor = getRandomColor()
+  },1000)
+  })
+
+  stopBtn.addEventListener('click',()=>{
+    console.log('Stop button clicked');
+    clearInterval(intervalId)
+  })
+
+
+</script>
+</html>
