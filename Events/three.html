@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+        position: fixed;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+</head>
+<body style="background-color: gray;">
+    <div class="div">
+        <h1 id="h1">This is a timeout page</h1>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+    
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str,Date.now())
+    }
+    let intervalid// 
+    document.getElementById('start').addEventListener('click',()=>{
+        console.log('Timeout started');
+        intervalid = setInterval(sayDate,1000,"Anil")
+        //print
+    })
+
+    document.getElementById('stop').addEventListener('click',()=>{
+        clearInterval(intervalid)
+        console.log('Timeout stopped');
+    })
+    
+    
+</script>
+
+
+</html>
