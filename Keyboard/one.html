@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            /* Set background color */
+            font-family: Arial, sans-serif;
+            /* Set font family */
+            color: green;
+            /* Set text color */
+            margin: 0;
+            /* Remove default margins */
+            background-color: darkgray;
+        }
+    
+        table {
+            border-collapse: collapse;
+            /* Merge cell borders */
+            width: 100%;
+            /* Set table width */
+            border: 1px solid #000;
+            /* Add a border to the table */
+        }
+    
+        /* Style for table header */
+        th {
+            border: 1px solid #000;
+            /* Add borders to header cells */
+            background-color: #f2f2f2;
+            /* Set header background color */
+            padding: 8px;
+            /* Add padding to header cells */
+            text-align: left;
+            /* Align header text to the left */
+        }
+    
+        /* Style for table data cells */
+        td {
+            border: 1px solid #000;
+            /* Add borders to data cells */
+            padding: 8px;
+            /* Add padding to data cells */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Press any key to watch</h1>
+        <p> <span id = "insert"></span></p>
+    </div>
+</body>
+<script>
+
+    const insert = document.getElementById('insert')
+
+    window.addEventListener('keydown',(e)=>{
+        console.log(e.key);
+        insert.innerHTML= `
+        <div>
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>KeyCode</th>
+                    <th>Code</th>
+                </tr>
+                <tr>
+                    <td>${e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                    
+                </tr>
+            </table>
+        </div>
+        `
+    })
+</script>
+</html>
