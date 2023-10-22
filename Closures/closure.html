@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+
+<body style="background-color: #313131;">
+    <button id="orange">
+        Orange
+    </button>
+    <button id="green">
+        Green
+    </button>
+</body>
+<script>
+    /*
+    function init()
+    {
+        let name="anil"
+        function displayName()
+        {
+            console.log(name);                  //lexical scoping : outer variable can be accessed by inner function
+            console.log("displayname ended");
+        }
+    
+        displayName()
+        console.log("init ended");
+    }
+    init()
+    
+    function init() {
+        let myvar = "abc"
+        function inner() {
+            console.log(myvar);
+        }
+        return inner
+    }
+    const myfun = init()        //returning inner function as well as lexicographical scope also
+    myfun()
+    */
+    function clickHandler(color)
+    {
+        return function(){
+        document.body.style.backgroundColor = color
+        }
+    }
+    document.getElementById('orange').onclick = clickHandler ('orange') 
+    document.getElementById('green').onclick = clickHandler ('green')
+    
+
+</script>
+
+</html>
