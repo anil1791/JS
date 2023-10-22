@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <style>
+        .center-container {
+            text-align: center;
+        }
+
+        .center-container button {
+            margin: 10px;
+            /* Add margin for spacing between buttons */
+        }
+    </style>
+</head>
+
+<body style="background-color: darkgreen;">
+    <div class="center-container">
+        <button>Button</button>
+    </div>
+
+</body>
+<script>
+    class React {
+        constructor() {
+            this.library = "React"
+            this.server = "https://locahost:3000"
+
+            document.querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+        }
+        handleClick() {
+            console.log("Button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+
+
+</script>
+
+</html>
